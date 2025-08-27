@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 export default function CTA() {
   return (
     <>
@@ -13,9 +13,11 @@ export default function CTA() {
             Join clubs, book resources, and manage events effortlessly with our
             platform.
           </p>
-          <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow hover:bg-gray-100 transition">
-            Get Started
-          </button>
+          <Link href="/get-started">
+            <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow hover:bg-gray-200 transition">
+              Get Started
+            </button>
+          </Link>
         </div>
       </section>
     </>

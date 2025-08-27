@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false);
@@ -119,12 +120,11 @@ export default function Hero() {
           animate="visible"
           className="mt-8 flex items-center justify-center gap-4"
         >
-          <a
-            href="#features"
-            className="px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold shadow-lg hover:bg-indigo-700 transition"
-          >
-            Get Started
-          </a>
+          <Link href="/get-started">
+            <button className="px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold shadow-lg hover:bg-indigo-700 transition">
+              Get Started
+            </button>
+          </Link>
           <a
             href="#about"
             className="px-6 py-3 rounded-full border border-white/40 text-white font-medium hover:bg-white/10 focus:outline-none transition"

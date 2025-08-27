@@ -11,11 +11,11 @@ export default function Contact() {
             {/* Contact Info */}
             <div>
               <h3 className="text-xl font-semibold mb-4">
-                We’d love to hear from you!
+                We'd love to hear from you!
               </h3>
               <p className="text-gray-600 mb-6">
                 Have questions about events, clubs, or bookings? Reach out and
-                we’ll respond quickly.
+                we'll respond quickly.
               </p>
               <p className="mb-2">
                 <strong>Email:</strong> support@campusevents.com
@@ -67,7 +67,7 @@ export default function Contact() {
             <a href="#services" className="hover:underline">
               Services
             </a>
-            <a href="#testimonials" className="hover:underline">
+            <a href="#testimonial" className="hover:underline">
               Testimonials
             </a>
             <a href="#contact" className="hover:underline">

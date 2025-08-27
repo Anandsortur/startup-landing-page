@@ -3,10 +3,10 @@ Follow these steps to run the project locally:
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/project-name.git
+   https://github.com/Anandsortur/startup-landing-page.git
 2. Navigate into the project folder:  
    ```bash
-   cd project-name
+   cd startup-landing-page
 3. Install dependencies:  
    ```bash
    npm install

@@ -43,29 +43,33 @@ export default function Hero() {
     >
       {/* Media: video on desktop, image on mobile */}
       <div className="absolute inset-0">
-        {showVideo ? (
+        {/* Poster always visible, video fades in on desktop */}
+        <Image
+          src="/media/hero-poster1.webp"
+          alt="Campus collaboration background"
+          fill
+          priority
+          sizes="100vw"
+          className={`object-cover transition-opacity duration-700 ${
+            loaded && showVideo ? "opacity-0" : "opacity-100"
+          }`}
+        />
+        {showVideo && (
           <video
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-700 ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
             autoPlay
             loop
             muted
             playsInline
             preload="metadata"
             onCanPlayThrough={() => setLoaded(true)}
+            poster="/media/hero-poster1.webp"
           >
             <source src="/media/hero1.webm" type="video/webm" />
             <source src="/media/hero1.mp4" type="video/mp4" />
           </video>
-        ) : (
-          <Image
-            src="/media/hero-poster1.png"
-            alt="Campus collaboration background"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-            onLoadingComplete={() => setLoaded(true)}
-          />
         )}
 
         {/* Overlay  */}
